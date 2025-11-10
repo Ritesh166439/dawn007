@@ -1,10 +1,13 @@
 {
+  "name": "template 404",
+  "layout": "theme",
   "sections": {
-    "main": {
-      "type": "main-404"
+    "template": {
+      "type": "template-404",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "template"
   ]
 }

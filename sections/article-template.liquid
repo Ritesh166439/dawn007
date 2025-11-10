@@ -1,0 +1,123 @@
+<article class="flex flex-col gap-6 my-8">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'article_title' %}
+        <div class="flex items-center justify-center">
+          <div class="text-center max-w-7xl">
+            <a href="{{ blog.url }}" class="text-base font-bold text-gray-500 uppercase hover:text-gray-900">
+              {{- blog.title -}}
+            </a>
+            <h1 class="text-4xl font-medium md:text-6xl">{{ article.title }}</h1>
+          </div>
+        </div>
+      {% when 'article_name' %}
+        <div class="flex items-center justify-center">
+          <div class="text-center max-w-7xl">
+            {%- if section.settings.enable_author -%}
+              <small class="mb-2 text-gray-500">By {{ article.author }}</small>
+            {%- endif -%}
+          </div>
+        </div>
+
+      {% when 'article_published_date' %}
+        <div class="text-center max-w-7xl">
+          {%- if section.settings.enable_publish_date -%}
+            <time class="mb-4 text-gray-500" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+              {{- article.published_at | date: '%B %d, %Y' -}}
+            </time>
+          {%- endif -%}
+        </div>
+
+      {% when 'featured_image' %}
+        <div class="items-center justify-center ">
+          <div class="items-center justify-center mx-2 overflow-hidden max-w-8xl md:max-auto">
+            {% if article.image != blank %}
+              <img
+                src="{{ article.image | img_url: 'large' }}"
+                alt="{{ article.image.alt }}"
+                class="object-cover object-center w-full p-5 rounded-lg h-80 md:h-96 "
+              >
+            {% else %}
+              {% assign placeholder_image = 'lifestyle-2' %}
+              {{ placeholder_image | placeholder_svg_tag: 'w-full h-80 md:h-96 object-center object-cover p-5' }}
+            {% endif %}
+          </div>
+        </div>
+      {% when 'article_content' %}
+        <div class="flex items-center justify-center">
+          <div class="max-w-7xl">{{ article.content }}</div>
+        </div>
+    {% endcase %}
+  {% else %}
+
+  {% endfor %}
+</article>
+<div class="mx-auto my-8 max-w-7xl">
+  <h2 class="text-3xl font-bold">Comments</h2>
+  {% if article.comments_enabled? %}
+    {% if article.comments_count > 0 %}
+      {% for comment in article.comments %}
+        <div class="comment">
+          <strong>{{ comment.author }}</strong>
+          <p>{{ comment.content }}</p>
+          <span>{{ comment.created_at | date: '%B %d, %Y' }}</span>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% form 'new_comment', article %}
+      {{ form.errors | default_errors }}
+      <input type="text" name="comment[author]" placeholder="Your name" required>
+      <input type="email" name="comment[email]" placeholder="Enter Email" required>
+      <textarea name="comment[body]" placeholder="Comment" required></textarea>
+      <button type="submit" class="px-4 py-3 text-white bg-blue-500 rounded">Post comment</button>
+    {% endform %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Article Template",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_author",
+      "default": true,
+      "label": "Show Author Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_publish_date",
+      "default": true,
+      "label": "Show Publish Date"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "article_title",
+      "name": "Title",
+      "limit": 1
+    },
+    {
+      "type": "article_name",
+      "name": "Author",
+      "limit": 1
+    },
+    {
+      "type": "article_published_date",
+      "name": "Published Date",
+      "limit": 1
+    },
+    {
+      "type": "featured_image",
+      "name": "thumbnail",
+      "limit": 1
+    },
+    {
+      "type": "article_content",
+      "name": "Content",
+      "limit": 1
+    }
+  ]
+}
+{% endschema %}
