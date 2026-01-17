@@ -12,9 +12,18 @@
     "template": {
       "type": "template-product",
       "settings": {}
+    },
+    "template_demo_8kFC8Y": {
+      "type": "template-demo",
+      "name": " Components",
+      "settings": {
+        "heading": "Why Choose Us",
+        "subtext": "Our premium features"
+      }
     }
   },
   "order": [
-    "template"
+    "template",
+    "template_demo_8kFC8Y"
   ]
 }
