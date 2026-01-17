@@ -35,9 +35,18 @@
         "featured_collection": "all",
         "number_of_products_to_show": 4
       }
+    },
+    "template_demo_nqd7Ff": {
+      "type": "template-demo",
+      "name": " Components",
+      "settings": {
+        "heading": "Why Choose Us",
+        "subtext": "Our premium features"
+      }
     }
   },
   "order": [
-    "featured-collection"
+    "featured-collection",
+    "template_demo_nqd7Ff"
   ]
 }
