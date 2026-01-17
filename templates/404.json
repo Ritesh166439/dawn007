@@ -8,13 +8,15 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "theme",
+  "wrapper": "div#404_template.custom-class[custom-attribute=hellow]",
   "sections": {
-    "main": {
-      "type": "main-404",
+    "template-404": {
+      "type": "template-404",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "template-404"
   ]
 }

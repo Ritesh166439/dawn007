@@ -1,0 +1,67 @@
+<div class="py-8 bg-red-100">
+    {% paginate blog.articles by section.settings.number_of_blog_posts %}
+    <h1 class="text-3xl text-center">{{ blog.title }}</h1>
+    <div class="mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {% for article in blog.articles %}
+            <div class="w-full px-3 py-6">
+                <div class="overflow-hidden bg-white rounded-lg shadow-xl">
+                    {% if article.image %}
+                    <a href="{{ article.url }}">
+                        <img class="object-cover w-full h-80" src="{{ article.image | img_url: 'medium' }}"
+                            alt="{{ article.image.alt }}">
+                    </a>
+                    {% else %}
+                    <a href="{{ article.url }}">
+                        {{ 'image' | placeholder_svg_tag:'object-cover w-full h-80 bg-gray-200' }}
+                    </a>
+                    {% endif %}
+                    <div class="p-4">
+                        <h1 class="my-4 text-xl font-medium">{{ article.title }}</h1>
+                        {% if article.excerpt.size > 0 %}
+                        <p>{{ article.excerpt | strip_html | truncatewords: 100 }}</p>
+                        {% else %}
+                        <p>{{ article.content | strip_html | truncatewords: 100 }}</p>
+
+                        {% endif %}
+                        <a href="{{ article.url }}" class="mt-2 font-medium text-blue-600 hover:text-blue-800">{{
+                            section.settings.blog_read_more}}</a>
+                    </div>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="max-w-6xl max-auto">
+        {% render 'pagination', pagination: paginate %}
+    </div>
+    {% endpaginate %}
+</div>
+
+
+{% schema %}
+
+{
+"name": "Blog",
+"settings": [
+{
+"type": "text",
+"id": "blog_read_more",
+"label": "Read_More_Label",
+"default": "Read more"
+},
+{
+"type": "range",
+"id": "number_of_blog_posts",
+"step": 1,
+"min": 1,
+"max": 8,
+"label": "Blog post per page",
+"default": 3
+}
+]
+}
+{% endschema %}
