@@ -1,6 +1,6 @@
 <section class="pro-component">
     <div class="pro-container">
-        <h2 class="bg-red-500 pro-title">{{ section.settings.heading }}</h2>
+        <h2 class="pro-title">{{ section.settings.heading }}</h2>
         <p class="pro-sub">{{ section.settings.subtext }}</p>
 
         <div class="pro-grid">
@@ -9,7 +9,7 @@
                 {% if block.settings.image %}
                 <img src="{{ block.settings.image | image_url: width: 200 }}" alt="">
                 {% endif %}
-                <h3 class="bg-red-500">{{ block.settings.title }}</h3>
+                <h3 class="">{{ block.settings.title }}</h3>
                 <p>{{ block.settings.text }}</p>
             </div>
             {% endfor %}
@@ -92,7 +92,7 @@
 {
 "type": "card",
 "name": "Card",
-"limit": 2,
+
 "settings": [
 {
 "type": "image_picker",
