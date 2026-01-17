@@ -64,22 +64,10 @@
         "heading": "Why Choose Us",
         "subtext": "Our premium features"
       }
-    },
-    "footer_7aDrdR": {
-      "type": "footer",
-      "name": "Custom Footer",
-      "settings": {
-        "about_text": "We provide premium quality products with fast delivery.",
-        "menu": "",
-        "address": "New Delhi, India",
-        "phone": "+91 9999999999",
-        "email": "support@store.com"
-      }
     }
   },
   "order": [
     "featured-collection",
-    "template_demo_yKXXfV",
-    "footer_7aDrdR"
+    "template_demo_yKXXfV"
   ]
 }
