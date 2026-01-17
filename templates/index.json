@@ -12,12 +12,19 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
       }
     },
     "hero_banner": {
       "type": "banner",
-      "settings": {}
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
     }
   },
   "order": [
