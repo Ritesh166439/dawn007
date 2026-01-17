@@ -64,10 +64,18 @@
         "heading": "Why Choose Us",
         "subtext": "Our premium features"
       }
+    },
+    "contact_form_UHMXJG": {
+      "type": "contact-form",
+      "name": "Contact Form",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "featured-collection",
-    "template_demo_yKXXfV"
+    "template_demo_yKXXfV",
+    "contact_form_UHMXJG"
   ]
 }
