@@ -27,10 +27,37 @@
             "title": "Plant",
             "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
           }
+        },
+        "card_drCdzG": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/1_d3734867-b885-4995-9e08-172231d441c9.webp",
+            "title": "Plant",
+            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
+          }
+        },
+        "card_ePVKnt": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/1_d3734867-b885-4995-9e08-172231d441c9.webp",
+            "title": "Plant",
+            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
+          }
+        },
+        "card_yPTjyK": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/1_ac759bfb-e697-4692-b3b8-03e6fd305378.webp",
+            "title": "Plant",
+            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
+          }
         }
       },
       "block_order": [
-        "card_AcHFDH"
+        "card_AcHFDH",
+        "card_drCdzG",
+        "card_ePVKnt",
+        "card_yPTjyK"
       ],
       "name": " Components",
       "settings": {
