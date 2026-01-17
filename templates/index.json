@@ -31,7 +31,7 @@
       "name": "Related Products",
       "settings": {
         "heading": "Related Products",
-        "limit": 4
+        "limit": 3
       }
     }
   },
