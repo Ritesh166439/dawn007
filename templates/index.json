@@ -17,6 +17,13 @@
         "number_of_products_to_show": 4
       }
     },
+    "contact_form_mkNiW7": {
+      "type": "contact-form",
+      "name": "Contact Form",
+      "settings": {
+        "title": ""
+      }
+    },
     "template_demo_a8AYXb": {
       "type": "template-demo",
       "name": " Components",
@@ -37,6 +44,7 @@
   },
   "order": [
     "featured-collection",
+    "contact_form_mkNiW7",
     "template_demo_a8AYXb",
     "hero_banner"
   ]
