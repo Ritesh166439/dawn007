@@ -12,70 +12,16 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
+        "featured_collection": "all"
       }
     },
-    "template_demo_yKXXfV": {
-      "type": "template-demo",
-      "blocks": {
-        "card_MxnBRi": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/1_d3734867-b885-4995-9e08-172231d441c9.webp",
-            "title": "Cart",
-            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
-          }
-        },
-        "card_DJEncw": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/1_60ae462b-0cc6-4df0-8b69-947c1b6bf9a6.webp",
-            "title": "Cart",
-            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
-          }
-        },
-        "card_aBt6pP": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/6_0a2b08c5-56bd-425c-8242-94b811a74570.webp",
-            "title": "Cart",
-            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
-          }
-        },
-        "card_DPfBCp": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/1_d3734867-b885-4995-9e08-172231d441c9.webp",
-            "title": "Cart",
-            "text": "A curated set of succulent and semi-succulent varieties housed in pristine ivory aesthetic. These drought-tolerant, wealth-attracting plants offer a clean, minimalist look while requiring negligible watering. Perfect for modern, high-contrast interiors"
-          }
-        }
-      },
-      "block_order": [
-        "card_MxnBRi",
-        "card_DJEncw",
-        "card_aBt6pP",
-        "card_DPfBCp"
-      ],
-      "name": " Components",
-      "settings": {
-        "heading": "Why Choose Us",
-        "subtext": "Our premium features"
-      }
-    },
-    "contact_form_UHMXJG": {
-      "type": "contact-form",
-      "name": "Contact Form",
-      "settings": {
-        "title": ""
-      }
+    "hero_banner": {
+      "type": "banner",
+      "settings": {}
     }
   },
   "order": [
     "featured-collection",
-    "template_demo_yKXXfV",
-    "contact_form_UHMXJG"
+    "hero_banner"
   ]
 }
