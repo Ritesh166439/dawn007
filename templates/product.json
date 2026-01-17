@@ -12,9 +12,18 @@
     "template": {
       "type": "template-product",
       "settings": {}
+    },
+    "template_related_product_E48t8V": {
+      "type": "template-related-product",
+      "name": "Related Products",
+      "settings": {
+        "heading": "Related Products",
+        "limit": 4
+      }
     }
   },
   "order": [
-    "template"
+    "template",
+    "template_related_product_E48t8V"
   ]
 }
