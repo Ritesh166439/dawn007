@@ -17,6 +17,27 @@
         "number_of_products_to_show": 4
       }
     },
+    "template_demo_yKXXfV": {
+      "type": "template-demo",
+      "blocks": {
+        "card_MxnBRi": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/1_d3734867-b885-4995-9e08-172231d441c9.webp",
+            "title": "Cart",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_MxnBRi"
+      ],
+      "name": " Components",
+      "settings": {
+        "heading": "Why Choose Us",
+        "subtext": "Our premium features"
+      }
+    },
     "footer_7aDrdR": {
       "type": "footer",
       "name": "Custom Footer",
@@ -31,6 +52,7 @@
   },
   "order": [
     "featured-collection",
+    "template_demo_yKXXfV",
     "footer_7aDrdR"
   ]
 }
