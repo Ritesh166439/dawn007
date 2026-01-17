@@ -94,6 +94,14 @@
         "title": ""
       }
     },
+    "template_related_product_xiNthx": {
+      "type": "template-related-product",
+      "name": "Related Products",
+      "settings": {
+        "heading": "Related Products",
+        "limit": 4
+      }
+    },
     "hero_banner": {
       "type": "banner",
       "settings": {
@@ -107,6 +115,7 @@
   "order": [
     "banner_7HQiMe",
     "featured-collection",
+    "template_related_product_xiNthx",
     "template_demo_a8AYXb",
     "contact_form_mkNiW7",
     "hero_banner"
