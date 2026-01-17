@@ -12,16 +12,32 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
       }
     },
     "hero_banner": {
       "type": "banner",
-      "settings": {}
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
+    "template_related_product_MWmUdi": {
+      "type": "template-related-product",
+      "name": "Related Products",
+      "settings": {
+        "heading": "Related Products",
+        "limit": 4
+      }
     }
   },
   "order": [
     "featured-collection",
-    "hero_banner"
+    "hero_banner",
+    "template_related_product_MWmUdi"
   ]
 }
