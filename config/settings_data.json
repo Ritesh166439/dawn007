@@ -9,12 +9,31 @@
  */
 {
   "current": {
-    "primary_color": "#ff0000",
-    "background_color": "#000000",
-    "page_width": 1200,
+    "logo_width": 90,
+    "favicon": "",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
-    "logo_width": 90,
-    "favicon": ""
+    "page_width": 1200,
+    "primary_color": "#ff0000",
+    "background_color": "#000000",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "about_text": "We provide premium quality products with fast delivery.",
+          "menu": "main-menu",
+          "address": "New Delhi, India",
+          "phone": "+91 9999999999",
+          "email": "support@store.com"
+        }
+      }
+    },
+    "content_for_index": []
   }
 }
