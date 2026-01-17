@@ -19,6 +19,35 @@
     },
     "template_demo_a8AYXb": {
       "type": "template-demo",
+      "blocks": {
+        "product_card_wQPLFC": {
+          "type": "product_card",
+          "settings": {
+            "product_title": "",
+            "product_text": ""
+          }
+        },
+        "product_card_fRF43B": {
+          "type": "product_card",
+          "settings": {
+            "product_image": "shopify://shop_images/1_60ae462b-0cc6-4df0-8b69-947c1b6bf9a6.webp",
+            "product_title": "",
+            "product_text": ""
+          }
+        },
+        "card_3Q4CNP": {
+          "type": "card",
+          "settings": {
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_wQPLFC",
+        "product_card_fRF43B",
+        "card_3Q4CNP"
+      ],
       "name": " Components",
       "settings": {
         "heading": "Why Choose Us",
