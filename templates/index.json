@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "template_related_product_cT9EKX": {
+      "type": "template-related-product",
+      "name": "Related Products",
+      "settings": {
+        "heading": "Related Products",
+        "limit": 4
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -67,6 +75,7 @@
     }
   },
   "order": [
+    "template_related_product_cT9EKX",
     "featured-collection",
     "template_demo_yKXXfV"
   ]
