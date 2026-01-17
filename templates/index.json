@@ -11,6 +11,17 @@
   "sections": {
     "featured-collection": {
       "type": "featured-collection",
+      "blocks": {
+        "text_kh4ftP": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_kh4ftP"
+      ],
       "settings": {
         "title": "Featured Collection",
         "featured_collection": "all",
