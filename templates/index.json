@@ -64,10 +64,19 @@
         "heading": "Why Choose Us connect",
         "subtext": "Our premium features"
       }
+    },
+    "template_related_product_WPTrdh": {
+      "type": "template-related-product",
+      "name": "Related Products",
+      "settings": {
+        "heading": "Related Products",
+        "limit": 4
+      }
     }
   },
   "order": [
     "featured-collection",
-    "template_demo_fHnf3y"
+    "template_demo_fHnf3y",
+    "template_related_product_WPTrdh"
   ]
 }
