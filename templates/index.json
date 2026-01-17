@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "banner_CcDaTN": {
+      "type": "banner",
+      "name": "Hero Banner",
+      "settings": {
+        "image": "shopify://shop_images/1_60ae462b-0cc6-4df0-8b69-947c1b6bf9a6.webp",
+        "heading": "Hero Section",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/all"
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -36,6 +47,7 @@
     }
   },
   "order": [
+    "banner_CcDaTN",
     "featured-collection",
     "hero_banner",
     "template_related_product_MWmUdi"
