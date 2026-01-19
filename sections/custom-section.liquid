@@ -1,0 +1,56 @@
+<section class="custom-banner">
+    {% if section.settings.image != blank %}
+    <img src="{{ section.settings.image | image_url: width: 1800 }}" alt="{{ section.settings.title }}" class="w-full">
+    {% endif %}
+
+    <div class="banner-content">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.text }}</p>
+
+        {% if section.settings.button_link != blank %}
+        <a href="{{ section.settings.button_link }}" class="btn">
+            {{ section.settings.button_text }}
+        </a>
+        {% endif %}
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "Custom Section",
+"settings": [
+{
+"type": "image_picker",
+"id": "image",
+"label": "Banner Image"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Banner Title"
+},
+{
+"type": "textarea",
+"id": "text",
+"label": "Description"
+},
+{
+"type": "text",
+"id": "button_text",
+"label": "Button Text",
+"default": "Shop Now"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Button Link"
+}
+],
+"presets": [
+{
+"name": "Custom section"
+}
+]
+}
+{% endschema %}
