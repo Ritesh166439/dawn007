@@ -67,7 +67,7 @@
           "settings": {
             "image": "shopify://shop_images/imgi_109_Ivory.jpg",
             "title": "New Collection",
-            "text": "",
+            "text": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.",
             "button_text": "Shop Now",
             "button_link": ""
           }
