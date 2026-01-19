@@ -41,6 +41,14 @@
         "number_of_products_to_show": 4
       }
     },
+    "template_related_product_MLjY3A": {
+      "type": "template-related-product",
+      "name": "Featured Product Custom",
+      "settings": {
+        "heading": "Check out this product",
+        "featured_product": "product-plants-1"
+      }
+    },
     "custom_section_iXUzx9": {
       "type": "custom-section",
       "name": "Custom section",
@@ -52,6 +60,7 @@
     "featured-collection",
     "custom_section_zthMjj",
     "featured_collection_3maaHw",
+    "template_related_product_MLjY3A",
     "custom_section_iXUzx9"
   ]
 }
