@@ -1,0 +1,225 @@
+<article class="py-8" itemscope itemtype="http://schema.org/BLogPosting">
+    {% for block in section.blocks %}
+    {% case block.type %}
+    {% when "article_title" %}
+    <div class="flex items-center justify-center">
+        <div class="text-center max-w-7xl">
+            <a href="{{blog.url}}" class="text-base text-gray-500 uppercase hover:text-gray-700">{{blog.title}}</a>
+            <h1 class="text-4xl font-medium md:text-6xl" itemprop="headline">{{ article.title }}</h1>
+        </div>
+    </div>
+    {% when "article_author" %}
+    <div class="flex items-center justify-center ">
+        <div class="text-center max-w-7xl" itemscope itemtype="http://schema.org/Person">
+            {%- if section.settings.enable_author -%}
+            <small itemprop="author">{{article.author }}</small>
+            {%- endif -%}
+        </div>
+    </div>
+
+    {% when "article_published_date" %}
+    <div class="flex items-center justify-center ">
+        <div class="text-center max-w-7xl">
+            {%- if section.settings.enable_published_date -%}
+            <time itemprop="dateCreated datePublished" datetime="{{article.published_at | date: '%Y-%m-%d'}}">{{
+                article.published_at | date:
+                format:'on_date'
+                }}</time>
+            {%- endif -%}
+        </div>
+    </div>
+
+    {% when "feature_image" %}
+    <div itemprop="image" class="mx-2 my-4 overflow-hidden bg-blue-100 rounded-lg max-w-7xl md:mx-auto bg-ed-500">
+        {% if article.image != blank %}
+        <img src="{{article.image | img_url: 'large'}}" alt="{{article.image.alt}}">
+        {% else %}
+        {% assign placeholder_image = 'lifestyle-2' %}
+        {{ placeholder_image | placeholder_svg_tag:'w-full h-80 md:h96 object-cover object-center p-5' }}
+
+        {% endif %}
+    </div>
+
+    {% when "article_content" %}
+    <div class="flex items-center justify-center ">
+        <div itemprop="articleBody" class="max-w-7xl">{{article.content}}</div>
+    </div>
+
+    {% endcase %}
+    {% endfor %}
+</article>
+
+{% if blog.comments_enabled? %}
+
+
+<div id="comments" class="my-8">
+    {% if article.comments_count >0 %}
+    <div class="items-center justify-center flex-1 max-w-xl mx-auto mb-4">
+        <h1 class="mb-4 text-lg font-medium">See what people are saying</h1>
+        {% paginate article.comments by 2 %}
+        {% for comment in article.comments %}
+        <div class="flex-1 px-4 my-2 my-4 leading-relaxed border sm:py-4">
+            <span class="comment-author">{{ comment.author }}</span>
+            <span class="text-xs text-gray-400">{{ comment.created_at | date: format:'default'}}</span>
+            <p class="text-xs">{{comment.content}}</p>
+        </div>
+        {% endfor %}
+        <div class="max-w-6xl max-auto">
+            {% render 'pagination', pagination: paginate %}
+        </div>
+
+        {% if paginate.pages > 1 %}
+        {{paginate | default_pagination }}
+        {% endif %}
+        {% endpaginate %}
+    </div>
+    {% else %}
+    there are no comments available in this article
+    {% endif %}
+</div>
+
+<div id="comment-form" class="mb-8">
+    {% form 'new_comment', article %}
+    <div class="items-center justify-center flex-1 max-w-4xl px-4 mx-auto">
+        {% if form.errors %}
+        <div class="p-5 border">
+            <div class="flex flex-row items-center w-full my-3">
+                <div class="text-red-500">
+                    {% render 'icon-failed' %}
+                </div>
+                <div class="ml-3 text-sm font-medium">
+                    Oh no! Your comment was not posted.
+                </div>
+            </div>
+            <ul class="px-4 mb-4 list-decimal ml-7">
+                {% for error in form.errors %}
+                <li>
+                    <span>
+                        {{form.errors.messages[error]}}
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+        {% else if form.posted_successfully? %}
+        <div class="flex flex-row items-center w-full my-3">
+            <div class="text-green-500">
+                {% render 'icon-sucess' %}
+            </div>
+            <div class="ml-3 text-sm font-medium">
+                Your comment was posted successfully.
+            </div>
+        </div>
+
+        {% endif %}
+
+        <div class="px-1 mb-3 md:flex">
+            <div class="px-3 md:w-1/2">
+                <label for="comment_author" class="mb-2 text-xs font-medium text-gray-700 uppercase">Name</label>
+                <input type="text" name="comment[author]" id="comment_author" placeholder="Enter your name"
+                    class="w-full p-2 border border-gray-300 rounded-md " required>
+            </div>
+
+            <div class="px-3 md:w-1/2">
+                <label for="comment_email" class="mb-2 text-xs font-medium text-gray-700 uppercase">Email</label>
+                <input type="text" name="comment[email]" id="comment_email" placeholder="Enter your email"
+                    class="w-full p-2 border border-gray-300 rounded-md " required>
+            </div>
+        </div>
+        <div class="px-1 mb-3 md:flex">
+            <div class="px-3 md:w-full">
+                <label for="comment_content" class="mb-2 text-xs font-medium text-gray-700 uppercase">Comment</label>
+                <textarea name="comment[body]" id="comment_content" rows="5" placeholder="Enter your comment"
+                    class="w-full p-2 border border-gray-300 rounded-md " required></textarea>
+            </div>
+        </div>
+        <div class="px-1 mb-3 md:flex">
+            <div class="px-3 md:w-full">
+                <button type="submit"
+                    class="w-full px-4 py-2 text-base font-medium text-gray-800 border cursor-pointer hover:text-gray-500"
+                    value="post comment">Submit Comment</button>
+            </div>
+        </div>
+    </div>
+    {% endform %}
+</div>
+
+{% endif %}
+
+<script>
+    {
+        "@content": "//schema.org",
+            "@type": "BlogPosting",
+                "headline": "{{ article.title | json }}",
+                    "articleBody": "{{ article.content | strip_html | json }}",
+                        {% if article.excerpt != blank %}
+    "description": "{{ article.excerpt | strip_html | json }}",
+        {% endif %}
+    {% if article.image %}
+    "image": [
+        {{ article.image | img_url: 'medium' | prepend: 'http' | json }}
+    ]
+    {% endif %}
+    }
+    "datepublished" : "{{ article.published_at | date: format: 'default' | json }}",
+        "datecreated" : "{{ article.created_at | date: format: 'default' | json }}",
+            "author": {
+        "@type": "Person",
+            "name": "{{ article.author | json }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+            "name": "{{ shop.name | json }}"
+    }
+
+</script>
+
+{% schema %}
+{
+"name": "Template Article",
+
+"settings": [
+{
+"type": "checkbox",
+"id": "enable_author",
+"label": "Show Author",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "enable_published_date",
+"label": "Show Published Date",
+"default": true
+}
+],
+"blocks": [
+{
+"type": "article_title",
+"name": "Title",
+"limit": 1
+},
+{
+"type": "article_author",
+"name": "Author",
+"limit": 1
+},
+
+{
+"type": "article_published_date",
+"name": "Published Date",
+"limit": 1
+},
+{
+"type": "feature_image",
+"name": "Thumbnail",
+"limit": 1
+},
+{
+"type": "article_content",
+"name": "Content",
+"limit": 1
+}
+]
+}
+{% endschema %}

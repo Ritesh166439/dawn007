@@ -1,0 +1,41 @@
+<div class="container mx-auto ">
+    {% paginate search.results by 9 %}
+    <h1 class="my-4 text-xl text-center">Search Result</h1>
+    <div class="flex justify-center item-center">
+        <form action="routes.search_url" method="get">
+            <input type="search" name="q" placeholder="Search" value="{{search.terms | escape}}"
+                class="px-4 py-2 border rounded w-80">
+
+            <button type="submit" class="px-4 py-2 bg-gray-200 border rounded hover:bg-gray-600">Search</button>
+        </form>
+    </div>
+
+    {% if search.performed %}
+    {% if search.results.size > 0 %}
+    <div class="max-w-6xl mx-auto">
+        <p class="my-10 font-bold text-center text-gray-500">{{search.results.size}} Results found</p>
+        <div class="grid grid-cols-1 gap-3 md:grid-cols-4">
+            {% for item in search.results %}
+            {% case item.object_type %}
+            {% when 'product' %}
+            {% render 'product-cart', product_product: item %}
+
+            {% else %}
+            {% endcase %}
+
+            {% endfor %}
+        </div>
+    </div>
+
+    {% else %}
+    <div class="my-4 text-center">
+        <p class="font-bold">No result found for search item {{search.terms}}. Try with different kayword</p>
+    </div>
+
+    {% endif %}
+
+    {% endif %}
+
+
+    {% endpaginate %}
+</div>

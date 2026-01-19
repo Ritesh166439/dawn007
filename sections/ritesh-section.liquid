@@ -1,0 +1,62 @@
+<section class="px-5 py-16 mx-auto max-w-7xl">
+    <h2 class="mb-10 text-3xl font-bold text-center md:text-4xl">
+        {{ section.settings.title }}
+    </h2>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {% for block in section.blocks %}
+        {% assign col = block.settings.collection %}
+        {% if col != blank %}
+        <div class="overflow-hidden transition duration-300 bg-white rounded-full shadow-lg hover:-translate-y-2">
+            <a href="{{ col.url }}" class="block">
+                {% if col.image %}
+                <img src="{{ col.image | image_url: width: 500 }}" alt="{{ col.title }}"
+                    class="object-cover w-full h-50">
+                {% else %}
+                {{ 'collection-1' | placeholder_svg_tag: 'w-full h-50' }}
+                {% endif %}
+
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-semibold">{{ col.title }}</h3>
+                    <p class="text-sm text-gray-500">
+                        {{ col.products_count }} Products
+                    </p>
+                </div>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% schema %}
+{
+"name": "Ritesh Section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "Shop by Collection"
+}
+],
+"blocks": [
+{
+"type": "collection_block",
+"name": "Collection Block",
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "Select Collection"
+}
+]
+}
+],
+"max_blocks": 8,
+"presets": [
+{
+"name": "Ritesh Section"
+}
+]
+}
+{% endschema %}

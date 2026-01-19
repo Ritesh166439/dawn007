@@ -8,30 +8,15 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "theme",
+  "wrapper": "div#404_template.custom-class[custom-attribute=hellow]",
   "sections": {
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "featured_collection": "all"
-      }
-    },
-    "banner": {
-      "type": "banner",
-      "settings": {}
-    },
-    "custom-slider": {
-      "type": "Custom-slider",
-      "settings": {}
-    },
-    "ritesh-section": {
-      "type": "ritesh-section",
+    "template-404": {
+      "type": "template-404",
       "settings": {}
     }
   },
   "order": [
-    "banner",
-    "featured-collection",
-    "custom-slider",
-    "ritesh-section"
+    "template-404"
   ]
 }

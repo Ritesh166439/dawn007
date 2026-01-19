@@ -9,14 +9,12 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/imgi_59_DSC_2439.jpg",
-    "logo_width": 90,
-    "favicon": "shopify://shop_images/imgi_81_1_4127842f-1e5c-4b05-859e-58077ab3f17e.jpg",
-    "type_header_font": "assistant_n4",
-    "heading_scale": 100,
-    "page_width": 1200,
     "primary_color": "#ff0000",
     "background_color": "#000000",
-    "content_for_index": []
+    "page_width": 1200,
+    "type_header_font": "assistant_n4",
+    "heading_scale": 100,
+    "logo_width": 90,
+    "favicon": ""
   }
 }

@@ -1,0 +1,120 @@
+{% assign current = product.selected_or_first_available_variant %}
+
+<section class="grid gap-10 p-6 mx-auto max-w-7xl md:grid-cols-2">
+    <div>
+        <img id="mainImage" src="{{ product.featured_image | image_url: width: 800 }}" class="rounded">
+
+        <div class="flex justify-center my-3 overflow-scroll thumbnails">
+            {% for image in product.images %}
+            <img class="w-20 h-20 m-2 border rounded cursor-pointer thumb" src="{{ image | image_url: width: 150 }}"
+                data-full="{{ image | image_url: width: 800 }}">
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+        <p class="text-sm text-gray-500">{{ product.vendor }}</p>
+        <h1 class="mb-3 text-3xl font-bold">{{ product.title }}</h1>
+
+        <p id="variantPrice" class="text-2xl font-bold"> ₹{{product.price | money_without_currency }}</p>
+        <p id="variantCompare" class="text-gray-400 line-through"></p>
+        <p id="unitPrice" class="text-sm text-gray-500"></p>
+
+        <form action="/cart/add" method="post" id="productForm">
+            <input type="hidden" name="id" id="variantId" value="{{ current.id }}">
+
+            {% for option in product.options_with_values %}
+            <div class="option-block">
+                <p class="my-3 font-bold option-title">{{ option.name | upcase }}</p>
+                <div class="flex gap-4 option-grid">
+                    {% for value in option.values %}
+                    <label class="variant-card">
+                        <div class="px-2 py-1 border rounded">
+                            <div class="flex gap-2">
+                                <span class="label">{{ value }}</span>
+
+                                <input type="radio" class=" variantOption" name="option{{ forloop.parentloop.index }}"
+                                    value="{{ value }}" {% if option.selected_value==value %}checked{% endif %}>
+                            </div>
+                            <div class="card-box">
+                                <span class="price" data-price="{{ product.variants[forloop.index0].price }}">
+                                    ₹{{ product.variants[forloop.index0].price | money_without_currency }}
+                                </span>
+                            </div>
+                        </div>
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="bg-red-00">
+                {% assign rating = product.metafields.custom.rating %}
+                {% assign full = rating | floor %}
+                {% assign half = rating | minus: full %}
+                {% assign next_star = full | plus: 1 %}
+
+                {% for i in (1..5) %}
+                {% if i <= full %} ⭐ {% elsif i==next_star and half> 0 %}
+                    ⭐
+                    {% else %}
+                    ☆
+                    {% endif %}
+                    {% endfor %}
+            </div>
+
+            <div class="mt-6">
+                <label>Quantity</label>
+                <input type="number" name="quantity" value="1" min="1" class="w-24 p-2 border rounded">
+            </div>
+            <button class="w-full py-4 mt-6 text-white bg-black rounded hover:bg-gray-800">
+                Add to Cart
+            </button>
+        </form>
+        <div class="mt-8 prose">
+            {{ product.description }}
+        </div>
+    </div>
+</section>
+
+<script>
+
+    var product = {{ product | json }};
+    document.querySelectorAll('.variantOption').forEach(el => {
+        el.addEventListener('change', changeImage);
+    });
+    function changeImage() {
+        let selectedOptions = [];
+
+        document.querySelectorAll('.variantOption:checked').forEach(el => {
+            selectedOptions.push(el.value);
+        });
+
+        let variant = product.variants.find(v => {
+            return v.options.every((opt, i) => opt === selectedOptions[i]);
+        });
+
+        if (variant && variant.featured_image) {
+            document.getElementById('mainImage').src =
+                variant.featured_image.src.replace('.jpg', '_800x.jpg');
+        }
+    }
+
+    document.querySelectorAll('.thumb').forEach(img => {
+        img.addEventListener('click', function () {
+            document.getElementById('mainImage').src = this.dataset.full;
+        });
+    });
+</script>
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "{{ product.title }}",
+ "aggregateRating": {
+   "@type": "AggregateRating",
+   "ratingValue": "{{ product.metafields.custom.rating }}",
+   "reviewCount": "{{ product.metafields.custom.review_count }}"
+ }
+}
+</script>
