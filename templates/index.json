@@ -78,10 +78,11 @@
     "image-with-text": {
       "type": "image-with-text",
       "settings": {
+        "image": "shopify://shop_images/imgi_109_Ivory.jpg",
         "heading": "Premium Quality Products",
         "text": "We provide the best quality products with modern design and comfort.",
         "button_text": "Shop Now",
-        "button_link": ""
+        "button_link": "shopify://collections/all"
       }
     }
   },
