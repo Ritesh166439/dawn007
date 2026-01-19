@@ -28,6 +28,16 @@
         "number_of_products_to_show": 8
       }
     },
+    "banner_aMxed9": {
+      "type": "banner",
+      "name": "Hero Banner",
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
     "hero_banner": {
       "type": "banner",
       "settings": {
@@ -49,6 +59,7 @@
   "order": [
     "banner_CcDaTN",
     "featured-collection",
+    "banner_aMxed9",
     "hero_banner",
     "template_related_product_MWmUdi"
   ]
