@@ -51,6 +51,20 @@
     },
     "custom_section_iXUzx9": {
       "type": "custom-section",
+      "blocks": {
+        "slide_tNpixH": {
+          "type": "slide",
+          "settings": {
+            "title": "New Collection",
+            "text": "",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_tNpixH"
+      ],
       "name": "Custom section",
       "settings": {}
     }
