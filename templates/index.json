@@ -9,114 +9,39 @@
  */
 {
   "sections": {
-    "custom_slider_Rhawez": {
-      "type": "custom-slider",
-      "blocks": {
-        "slide_RMqfwV": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/1_df457125-0123-4c20-b2f7-3b97c6347177.webp",
-            "title": "New Collection",
-            "text": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        },
-        "slide_a39Qba": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/imgi_109_Ivory.jpg",
-            "title": "New Collection",
-            "text": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        },
-        "slide_W44Et4": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/imgi_99_1_2c764f2a-3074-4a87-a604-dce51d0326bb.jpg",
-            "title": "New Collection",
-            "text": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_RMqfwV",
-        "slide_a39Qba",
-        "slide_W44Et4"
-      ],
-      "name": "Modern Slider",
-      "settings": {}
-    },
-    "ritesh-section": {
-      "type": "ritesh-section",
-      "blocks": {
-        "collection_block_mpaMhg": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        },
-        "collection_block_htppk9": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        },
-        "collection_block_Xc9YVH": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        },
-        "collection_block_B3iHdD": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        }
-      },
-      "block_order": [
-        "collection_block_mpaMhg",
-        "collection_block_htppk9",
-        "collection_block_Xc9YVH",
-        "collection_block_B3iHdD"
-      ],
+    "featured-collection": {
+      "type": "featured-collection",
       "settings": {
-        "title": "Shop by Collection"
+        "featured_collection": "all"
       }
     },
     "banner": {
       "type": "banner",
-      "settings": {
-        "image": "shopify://shop_images/1_5abb9d02-d587-4510-89cd-a027debc3113.webp",
-        "heading": "Your Main Heading",
-        "subheading": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 8
-      }
+      "settings": {}
     },
     "custom-slider": {
       "type": "Custom-slider",
       "settings": {}
+    },
+    "shop-collection": {
+      "type": "shop-collection",
+      "settings": {}
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "settings": {}
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "settings": {}
     }
   },
   "order": [
-    "custom_slider_Rhawez",
-    "ritesh-section",
     "banner",
     "featured-collection",
-    "custom-slider"
+    "custom-slider",
+    "shop-collection",
+    "rich-text",
+    "image-with-text"
   ]
 }

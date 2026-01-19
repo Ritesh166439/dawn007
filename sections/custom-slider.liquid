@@ -1,110 +1,37 @@
-<section class="slider-modern" id="slider-{{ section.id }}">
-    <div class="slides">
+<section id="slider-{{ section.id }}" class="relative overflow-hidden">
+
+    <div class="flex transition-transform duration-700 ease-in-out slides">
+
         {% for block in section.blocks %}
-        <div class="slide">
+        <div class="relative min-w-full">
+
             {% if block.settings.image != blank %}
-            <img src="{{ block.settings.image | image_url: width: 1800 }}" alt="">
+            <img src="{{ block.settings.image | image_url: width: 1800 }}" class="w-full h-[480px] object-cover" alt="">
             {% else %}
             {{ 'lifestyle-2' | placeholder_svg_tag }}
             {% endif %}
 
-            <div class="overlay">
-                <h2>{{ block.settings.title }}</h2>
-                <p>{{ block.settings.text }}</p>
+            <div
+                class="absolute inset-0 flex flex-col justify-center px-16 text-white bg-gradient-to-r from-black/70 to-transparent">
+                <h2 class="text-4xl font-bold">{{ block.settings.title }}</h2>
+                <p class="max-w-lg my-3 opacity-90">{{ block.settings.text }}</p>
+
                 {% if block.settings.button_link != blank %}
-                <a href="{{ block.settings.button_link }}" class="btn">
+                <a href="{{ block.settings.button_link }}"
+                    class="py-3 font-semibold text-black transition bg-white rounded-full px-7 w-fit hover:bg-black hover:text-white">
                     {{ block.settings.button_text }}
                 </a>
                 {% endif %}
             </div>
+
         </div>
         {% endfor %}
+
     </div>
 
-    <div class="dots"></div>
+    <div class="absolute flex gap-2 -translate-x-1/2 bottom-4 left-1/2 dots"></div>
+
 </section>
-
-<style>
-    .slider-modern {
-        position: relative;
-        overflow: hidden;
-        border-radius: 16px
-    }
-
-    .slides {
-        display: flex;
-        transition: 0.6s ease
-    }
-
-    .slide {
-        min-width: 100%;
-        position: relative
-    }
-
-    .slide img {
-        width: 100%;
-        height: 480px;
-        object-fit: cover
-    }
-
-    .overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, rgba(0, 0, 0, .6), transparent);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 60px;
-        color: #fff
-    }
-
-    .overlay h2 {
-        font-size: 42px;
-        font-weight: 700
-    }
-
-    .overlay p {
-        max-width: 500px;
-        margin: 10px 0 20px
-    }
-
-    .btn {
-        background: #fff;
-        color: #000;
-        padding: 12px 28px;
-        border-radius: 999px;
-        width: fit-content;
-        font-weight: 600;
-        transition: .3s
-    }
-
-    .btn:hover {
-        background: #000;
-        color: #fff
-    }
-
-    .dots {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px
-    }
-
-    .dots span {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #fff;
-        opacity: .5;
-        cursor: pointer
-    }
-
-    .dots span.active {
-        opacity: 1
-    }
-</style>
 
 <script>
     (function () {
