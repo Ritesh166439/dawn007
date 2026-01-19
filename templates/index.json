@@ -28,6 +28,20 @@
     },
     "custom_slider_fc8dEd": {
       "type": "custom-slider",
+      "blocks": {
+        "slide_bLhcxb": {
+          "type": "slide",
+          "settings": {
+            "title": "New Collection",
+            "text": "",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_bLhcxb"
+      ],
       "name": "Modern Slider",
       "settings": {}
     },
