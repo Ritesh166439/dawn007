@@ -38,10 +38,31 @@
           "settings": {
             "collection": "plants"
           }
+        },
+        "collection_block_M9JFBn": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "plants"
+          }
+        },
+        "collection_block_bdknmL": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "plants"
+          }
+        },
+        "collection_block_mDTywq": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "plants"
+          }
         }
       },
       "block_order": [
-        "collection_block_FjyAhN"
+        "collection_block_FjyAhN",
+        "collection_block_M9JFBn",
+        "collection_block_bdknmL",
+        "collection_block_mDTywq"
       ],
       "settings": {
         "title": "Shop Collection"
