@@ -9,70 +9,29 @@
  */
 {
   "sections": {
-    "ritesh-section": {
-      "type": "ritesh-section",
-      "blocks": {
-        "collection_block_f4qRUw": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        },
-        "collection_block_h9bjYd": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        },
-        "collection_block_f7MrCj": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        },
-        "collection_block_UwmYJ7": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "plants"
-          }
-        }
-      },
-      "block_order": [
-        "collection_block_f4qRUw",
-        "collection_block_h9bjYd",
-        "collection_block_f7MrCj",
-        "collection_block_UwmYJ7"
-      ],
+    "featured-collection": {
+      "type": "featured-collection",
       "settings": {
-        "title": "Shop by Collection"
+        "featured_collection": "all"
       }
     },
     "banner": {
       "type": "banner",
-      "settings": {
-        "heading": "Your Main Heading",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
-      }
+      "settings": {}
     },
     "custom-slider": {
       "type": "Custom-slider",
+      "settings": {}
+    },
+    "ritesh-section": {
+      "type": "ritesh-section",
       "settings": {}
     }
   },
   "order": [
     "banner",
-    "ritesh-section",
     "featured-collection",
-    "custom-slider"
+    "custom-slider",
+    "ritesh-section"
   ]
 }

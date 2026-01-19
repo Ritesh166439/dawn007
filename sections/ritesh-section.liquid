@@ -7,7 +7,7 @@
         {% for block in section.blocks %}
         {% assign col = block.settings.collection %}
         {% if col != blank %}
-        <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:-translate-y-2">
+        <div class="overflow-hidden transition duration-300 bg-white rounded-full shadow-lg hover:-translate-y-2">
             <a href="{{ col.url }}" class="block">
                 {% if col.image %}
                 <img src="{{ col.image | image_url: width: 600 }}" alt="{{ col.title }}"
