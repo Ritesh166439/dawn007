@@ -9,6 +9,25 @@
  */
 {
   "sections": {
+    "custom_slider_Rhawez": {
+      "type": "custom-slider",
+      "blocks": {
+        "slide_a39Qba": {
+          "type": "slide",
+          "settings": {
+            "title": "New Collection",
+            "text": "",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_a39Qba"
+      ],
+      "name": "Modern Slider",
+      "settings": {}
+    },
     "banner": {
       "type": "banner",
       "settings": {
@@ -67,32 +86,13 @@
       "settings": {
         "title": "Shop by Collection"
       }
-    },
-    "custom_slider_Rhawez": {
-      "type": "custom-slider",
-      "blocks": {
-        "slide_a39Qba": {
-          "type": "slide",
-          "settings": {
-            "title": "New Collection",
-            "text": "",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_a39Qba"
-      ],
-      "name": "Modern Slider",
-      "settings": {}
     }
   },
   "order": [
-    "banner",
+    "custom_slider_Rhawez",
     "featured-collection",
+    "banner",
     "custom-slider",
-    "ritesh-section",
-    "custom_slider_Rhawez"
+    "ritesh-section"
   ]
 }
