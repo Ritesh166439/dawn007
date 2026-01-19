@@ -12,21 +12,24 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
       }
     },
     "banner": {
       "type": "banner",
-      "settings": {}
-    },
-    "custom-section": {
-      "type": "custom-section",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/imgi_131_1_40ec3562-794d-47d1-a28a-8ce7f2f7437a.jpg",
+        "heading": "hsYour Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
     }
   },
   "order": [
-    "banner",
     "featured-collection",
-    "custom-section"
+    "banner"
   ]
 }
