@@ -65,6 +65,7 @@
         "slide_tNpixH": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/imgi_109_Ivory.jpg",
             "title": "New Collection",
             "text": "",
             "button_text": "Shop Now",
