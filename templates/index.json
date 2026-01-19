@@ -92,6 +92,7 @@
     "banner": {
       "type": "banner",
       "settings": {
+        "image": "shopify://shop_images/1_5abb9d02-d587-4510-89cd-a027debc3113.webp",
         "heading": "Your Main Heading",
         "subheading": "Your banner description text here.",
         "button_text": "Shop Now",
