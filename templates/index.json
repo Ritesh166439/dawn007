@@ -110,7 +110,7 @@
       "type": "rich-text",
       "settings": {
         "heading": "About Our Brand",
-        "content": "<p>Write your content here.</p>"
+        "content": "<h3>🌱 Short Plant Description</h3><p>Bring freshness and elegance into your space with our beautiful indoor plants. Easy to maintain and perfect for home or office, these plants improve air quality while adding natural charm.</p><h3>🌿 Medium Product Description</h3><p>Our premium indoor plants are carefully grown to thrive in modern living spaces. They require minimal care, adapt easily to indoor environments, and add a calming green touch to your home or workspace. Perfect for gifting or personal décor.</p><h3>🌳 Long Professional Description</h3><p>Enhance your living space with our hand-selected indoor plants, grown with care to ensure long-lasting freshness and beauty. These plants not only elevate your décor but also help purify the air and create a peaceful environment. Suitable for homes, offices, cafés, and workspaces, our plants are easy to maintain and ideal for both beginners and plant lovers.</p><p>Each plant is delivered healthy, well-rooted, and ready to grow, making it a perfect gift choice for birthdays, housewarmings, or special occasions.</p>"
       }
     },
     "image-with-text": {
