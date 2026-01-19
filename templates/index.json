@@ -15,7 +15,7 @@
         "slide_RkgYJR": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_845bad27-be17-4a96-b2c4-077f750b919f.webp",
+            "image": "shopify://shop_images/imgi_99_1_2c764f2a-3074-4a87-a604-dce51d0326bb.jpg",
             "title": "New Collection",
             "text": "",
             "button_text": "Shop Now",
@@ -72,6 +72,7 @@
     "banner": {
       "type": "banner",
       "settings": {
+        "image": "shopify://shop_images/1_5abb9d02-d587-4510-89cd-a027debc3113.webp",
         "heading": "Your Main Heading",
         "subheading": "Your banner description text here.",
         "button_text": "Shop Now",
