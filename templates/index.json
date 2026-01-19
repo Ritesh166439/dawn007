@@ -9,15 +9,22 @@
  */
 {
   "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
       }
-    },
-    "banner": {
-      "type": "banner",
-      "settings": {}
     },
     "custom-slider": {
       "type": "Custom-slider",
@@ -25,15 +32,36 @@
     },
     "shop-collection": {
       "type": "shop-collection",
-      "settings": {}
+      "blocks": {
+        "collection_block_FjyAhN": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "plants"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_FjyAhN"
+      ],
+      "settings": {
+        "title": "Shop Collection"
+      }
     },
     "rich-text": {
       "type": "rich-text",
-      "settings": {}
+      "settings": {
+        "heading": "About Our Brand",
+        "content": "<p>Write your content here.</p>"
+      }
     },
     "image-with-text": {
       "type": "image-with-text",
-      "settings": {}
+      "settings": {
+        "heading": "Premium Quality Products",
+        "text": "We provide the best quality products with modern design and comfort.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
     }
   },
   "order": [
