@@ -9,27 +9,6 @@
  */
 {
   "sections": {
-    "banner": {
-      "type": "banner",
-      "settings": {
-        "heading": "Your Main Heading",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
-      }
-    },
-    "custom-slider": {
-      "type": "Custom-slider",
-      "settings": {}
-    },
     "ritesh-section": {
       "type": "ritesh-section",
       "blocks": {
@@ -67,12 +46,33 @@
       "settings": {
         "title": "Shop by Collection"
       }
+    },
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
+      }
+    },
+    "custom-slider": {
+      "type": "Custom-slider",
+      "settings": {}
     }
   },
   "order": [
     "banner",
+    "ritesh-section",
     "featured-collection",
-    "custom-slider",
-    "ritesh-section"
+    "custom-slider"
   ]
 }
