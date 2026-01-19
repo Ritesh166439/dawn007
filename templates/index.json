@@ -17,16 +17,6 @@
         "number_of_products_to_show": 4
       }
     },
-    "banner_gJfbx6": {
-      "type": "banner",
-      "name": "Hero Banner",
-      "settings": {
-        "heading": "Your Main Heading",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
     "banner": {
       "type": "banner",
       "settings": {
@@ -39,7 +29,6 @@
   },
   "order": [
     "featured-collection",
-    "banner_gJfbx6",
     "banner"
   ]
 }
