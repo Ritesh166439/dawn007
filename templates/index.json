@@ -61,6 +61,14 @@
       ],
       "settings": {}
     },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
+      }
+    },
     "banner": {
       "type": "banner",
       "settings": {
@@ -68,14 +76,6 @@
         "subheading": "Your banner description text here.",
         "button_text": "Shop Now",
         "button_link": ""
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
       }
     },
     "shop-collection": {
@@ -136,8 +136,8 @@
   },
   "order": [
     "custom-slider",
-    "banner",
     "featured-collection",
+    "banner",
     "shop-collection",
     "rich-text",
     "image-with-text"
