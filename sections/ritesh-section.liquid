@@ -10,10 +10,10 @@
         <div class="overflow-hidden transition duration-300 bg-white rounded-full shadow-lg hover:-translate-y-2">
             <a href="{{ col.url }}" class="block">
                 {% if col.image %}
-                <img src="{{ col.image | image_url: width: 600 }}" alt="{{ col.title }}"
-                    class="object-cover w-full h-60">
+                <img src="{{ col.image | image_url: width: 500 }}" alt="{{ col.title }}"
+                    class="object-cover w-full h-40">
                 {% else %}
-                {{ 'collection-1' | placeholder_svg_tag: 'w-full h-60' }}
+                {{ 'collection-2' | placeholder_svg_tag: 'w-full h-40' }}
                 {% endif %}
 
                 <div class="p-4 text-center">
