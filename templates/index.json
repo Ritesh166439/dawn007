@@ -28,27 +28,6 @@
       "name": "Modern Slider",
       "settings": {}
     },
-    "banner": {
-      "type": "banner",
-      "settings": {
-        "heading": "Your Main Heading",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
-      }
-    },
-    "custom-slider": {
-      "type": "Custom-slider",
-      "settings": {}
-    },
     "ritesh-section": {
       "type": "ritesh-section",
       "blocks": {
@@ -86,13 +65,34 @@
       "settings": {
         "title": "Shop by Collection"
       }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
+      }
+    },
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
+    "custom-slider": {
+      "type": "Custom-slider",
+      "settings": {}
     }
   },
   "order": [
     "custom_slider_Rhawez",
-    "featured-collection",
+    "ritesh-section",
     "banner",
-    "custom-slider",
-    "ritesh-section"
+    "featured-collection",
+    "custom-slider"
   ]
 }
