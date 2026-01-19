@@ -67,12 +67,18 @@
       "settings": {
         "title": "Shop by Collection"
       }
+    },
+    "custom_slider_Rhawez": {
+      "type": "custom-slider",
+      "name": "Modern Slider",
+      "settings": {}
     }
   },
   "order": [
     "banner",
     "featured-collection",
     "custom-slider",
-    "ritesh-section"
+    "ritesh-section",
+    "custom_slider_Rhawez"
   ]
 }
