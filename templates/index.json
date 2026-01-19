@@ -9,58 +9,19 @@
  */
 {
   "sections": {
-    "banner_CcDaTN": {
-      "type": "banner",
-      "name": "Hero Banner",
-      "settings": {
-        "image": "shopify://shop_images/1_60ae462b-0cc6-4df0-8b69-947c1b6bf9a6.webp",
-        "heading": "Hero Section",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/all"
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 8
+        "featured_collection": "all"
       }
     },
-    "banner_aMxed9": {
+    "banner": {
       "type": "banner",
-      "name": "Hero Banner",
-      "settings": {
-        "heading": "Your Main Heading",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
-    "hero_banner": {
-      "type": "banner",
-      "settings": {
-        "heading": "Your Main Heading",
-        "subheading": "Your banner description text here.",
-        "button_text": "Shop Now",
-        "button_link": ""
-      }
-    },
-    "template_related_product_MWmUdi": {
-      "type": "template-related-product",
-      "name": "Related Products",
-      "settings": {
-        "heading": "Related Products",
-        "limit": 4
-      }
+      "settings": {}
     }
   },
   "order": [
-    "banner_CcDaTN",
     "featured-collection",
-    "banner_aMxed9",
-    "hero_banner",
-    "template_related_product_MWmUdi"
+    "banner"
   ]
 }
