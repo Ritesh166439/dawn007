@@ -49,7 +49,7 @@
             "title": "New Collection",
             "text": "",
             "button_text": "Shop Now",
-            "button_link": ""
+            "button_link": "shopify://collections"
           }
         }
       },
