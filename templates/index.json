@@ -33,6 +33,12 @@
     "ritesh-section": {
       "type": "ritesh-section",
       "blocks": {
+        "collection_qKRbHN": {
+          "type": "collection",
+          "settings": {
+            "collection": "plants"
+          }
+        },
         "collection_gjUVfL": {
           "type": "collection",
           "settings": {
@@ -41,6 +47,7 @@
         }
       },
       "block_order": [
+        "collection_qKRbHN",
         "collection_gjUVfL"
       ],
       "settings": {
