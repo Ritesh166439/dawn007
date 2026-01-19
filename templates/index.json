@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "custom_section_iXUzx9": {
+      "type": "custom-section",
+      "blocks": {
+        "slide_tCPkTr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/imgi_81_1_4127842f-1e5c-4b05-859e-58077ab3f17e.jpg",
+            "title": "New Collection",
+            "text": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "slide_tNpixH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/imgi_109_Ivory.jpg",
+            "title": "New Collection",
+            "text": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_tCPkTr",
+        "slide_tNpixH"
+      ],
+      "name": "Custom section",
+      "settings": {}
+    },
     "banner": {
       "type": "banner",
       "settings": {
@@ -35,37 +66,6 @@
         "featured_collection": "plants",
         "number_of_products_to_show": 4
       }
-    },
-    "custom_section_iXUzx9": {
-      "type": "custom-section",
-      "blocks": {
-        "slide_tCPkTr": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/imgi_81_1_4127842f-1e5c-4b05-859e-58077ab3f17e.jpg",
-            "title": "New Collection",
-            "text": "",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        },
-        "slide_tNpixH": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/imgi_109_Ivory.jpg",
-            "title": "New Collection",
-            "text": "Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS",
-            "button_text": "Shop Now",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_tCPkTr",
-        "slide_tNpixH"
-      ],
-      "name": "Custom section",
-      "settings": {}
     }
   },
   "order": [
