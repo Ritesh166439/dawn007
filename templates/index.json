@@ -37,7 +37,7 @@
       "name": "Featured Collection",
       "settings": {
         "title": "Featured Collection",
-        "featured_collection": "frontpage",
+        "featured_collection": "plants",
         "number_of_products_to_show": 4
       }
     },
