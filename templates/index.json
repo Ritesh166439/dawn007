@@ -9,15 +9,22 @@
  */
 {
   "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "heading": "Your Main Heading",
+        "subheading": "Your banner description text here.",
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured_collection": "all"
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
       }
-    },
-    "banner": {
-      "type": "banner",
-      "settings": {}
     },
     "custom-slider": {
       "type": "Custom-slider",
@@ -25,7 +32,20 @@
     },
     "ritesh-section": {
       "type": "ritesh-section",
-      "settings": {}
+      "blocks": {
+        "collection_block_8p8kwa": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "plants"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_8p8kwa"
+      ],
+      "settings": {
+        "title": "Shop by Collection"
+      }
     }
   },
   "order": [
