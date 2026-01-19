@@ -12,17 +12,29 @@
     "custom_slider_Rhawez": {
       "type": "custom-slider",
       "blocks": {
+        "slide_RMqfwV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/imgi_131_1_40ec3562-794d-47d1-a28a-8ce7f2f7437a.jpg",
+            "title": "New Collection",
+            "text": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        },
         "slide_a39Qba": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/imgi_109_Ivory.jpg",
             "title": "New Collection",
-            "text": "",
+            "text": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
             "button_text": "Shop Now",
             "button_link": ""
           }
         }
       },
       "block_order": [
+        "slide_RMqfwV",
         "slide_a39Qba"
       ],
       "name": "Modern Slider",
