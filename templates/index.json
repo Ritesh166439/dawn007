@@ -31,11 +31,22 @@
             "button_text": "Shop Now",
             "button_link": ""
           }
+        },
+        "slide_W44Et4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/imgi_99_1_2c764f2a-3074-4a87-a604-dce51d0326bb.jpg",
+            "title": "New Collection",
+            "text": "To create a Plant Description section in Shopify, you generally want a layout that handles both text (care instructions, lighting, soil) and icons (for quick facts).",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "slide_RMqfwV",
-        "slide_a39Qba"
+        "slide_a39Qba",
+        "slide_W44Et4"
       ],
       "name": "Modern Slider",
       "settings": {}
