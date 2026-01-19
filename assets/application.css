@@ -380,6 +380,9 @@
   .h-80 {
     height: calc(var(--spacing) * 80);
   }
+  .h-\[400px\] {
+    height: 400px;
+  }
   .h-\[450px\] {
     height: 450px;
   }

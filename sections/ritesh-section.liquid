@@ -1,0 +1,54 @@
+<section>
+    <h2>{{ section.settings.title }}</h2>
+
+    <div>
+        {% for block in section.blocks %}
+        {% assign col = block.settings.collection %}
+        {% if col != blank %}
+        <div>
+            <a href="{{ col.url }}">
+                {% if col.image %}
+                <img src="{{ col.image | image_url: width: 600 }}" alt="{{ col.title }}">
+                {% else %}
+                {{ 'collection-1' | placeholder_svg_tag }}
+                {% endif %}
+                <h3>{{ col.title }}</h3>
+                <p>{{ col.products_count }} Products</p>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "Ritesh Section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title",
+"default": "Shop by Collection"
+}
+],
+"blocks": [
+{
+"type": "collection",
+"name": "Collection",
+"settings": [
+{
+"type": "collection",
+"id": "collection",
+"label": "Select Collection"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Ritesh Section"
+}
+]
+}
+{% endschema %}
