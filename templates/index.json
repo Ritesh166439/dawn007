@@ -107,13 +107,6 @@
         "number_of_products_to_show": 8
       }
     },
-    "ritesh_section_MXP6Ri": {
-      "type": "ritesh-section",
-      "name": "Ritesh Section",
-      "settings": {
-        "title": "Shop Collection"
-      }
-    },
     "custom-slider": {
       "type": "Custom-slider",
       "settings": {}
@@ -124,7 +117,6 @@
     "ritesh-section",
     "banner",
     "featured-collection",
-    "ritesh_section_MXP6Ri",
     "custom-slider"
   ]
 }
